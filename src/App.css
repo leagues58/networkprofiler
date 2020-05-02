@@ -5,31 +5,8 @@
   border: 1px solid red;
 }
 
-.appHeader {
-  display: flex;
-  margin-left: 3%;
-  flex-direction: row;
-  border: 1px solid black;
-}
-
-.headerText {
-  margin-left: 1%;
-}
-
-.requestContainer {
-  border: 1px solid green;
-}
-
 .detailContainer {
   display: flex;
   flex-direction: row;
   border: 1px solid black;
-}
-
-.requestDetailContainer {
-  border: 1px solid blue;
-}
-
-.responseContainer {
-  border: 1px solid orange;
 }

@@ -1,30 +1,21 @@
 import React from 'react';
 import './App.css';
+import Header from './components/Header';
+import RequestContainer from './components/RequestContainer';
+import RequestDetailContainer from './components/RequestDetailContainer';
+import ResponseContainer from './components/ResponseContainer';
 
 function App() {
   return (
     <div className='appContainer'>
-      <header className='appHeader'>
-        <img src='./logo.png' />
-        <div className='headerText'>
-          <h2>NetworkProfiler.app</h2>
-          <h3>An experiment for learning how network requests work in javascript using the Fetch API.</h3>
-        </div>
-      </header>
+      <Header />
 
-
-      <div className='requestContainer'>
-        <h3>Request Container</h3>
-      </div>
+      <RequestContainer />
 
       <div className='detailContainer'>
-        <div className='requestDetailContainer'>
-          <h3>Request Details Container</h3>
-        </div>
+        <RequestDetailContainer />
 
-        <div className='responseContainer'>
-          <h3>Response Container</h3>
-        </div>
+        <ResponseContainer />
       </div>
     </div>
   );
