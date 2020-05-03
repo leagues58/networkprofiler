@@ -13,15 +13,19 @@ const handleFormSubmit = (event) => {
   
 };
 
-const RequestContainer = () => {
-  const [request, setRequest] = useState();
+const RequestContainer = ({state}) => {
 
+  const {request, setRequest} = state;
+
+  const requestTypeChangeHandler = (event) => {
+    setRequest({...request, requestType: event.target.value})
+  };
   return (
     <div style={styles.requestContainer}>
       <form onSubmit={handleFormSubmit}>
-        <select name='requestType'>
-          <option>GET</option>
-          <option>POST</option>
+        <select name='requestType' value={request.requestType} onChange={requestTypeChangeHandler}>
+          <option value='get'>GET</option>
+          <option value='post'>POST</option>
         </select>
 
         <input type='text' name='urlInput' />
