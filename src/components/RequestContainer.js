@@ -1,15 +1,32 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const styles = {
   requestContainer: {
     border: '1px solid green',
+    padding: '1%',
   }
-}
+};
+
+const handleFormSubmit = (event) => {
+  event.preventDefault();
+
+  
+};
 
 const RequestContainer = () => {
+  const [request, setRequest] = useState();
+
   return (
     <div style={styles.requestContainer}>
-      <h3>Request Container</h3>
+      <form onSubmit={handleFormSubmit}>
+        <select name='requestType'>
+          <option>GET</option>
+          <option>POST</option>
+        </select>
+
+        <input type='text' name='urlInput' />
+        <button type='submit'>Submit</button>
+      </form>
   </div>
   );
 };
